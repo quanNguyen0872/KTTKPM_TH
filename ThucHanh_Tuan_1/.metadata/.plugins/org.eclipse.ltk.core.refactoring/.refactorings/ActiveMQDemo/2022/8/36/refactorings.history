@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sender.Qu&apos; to &apos;QueueSender&apos;&#x0D;&#x0A;- Original project: &apos;ActiveMQDemo&apos;&#x0D;&#x0A;- Original element: &apos;sender.Qu&apos;&#x0D;&#x0A;- Renamed element: &apos;sender.QueueSender&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Qu&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;sender{Qu.java[Qu" matchStrategy="1" name="QueueSender" qualified="false" references="true" similarDeclarations="false" stamp="1661679135384" textual="false" version="1.0"/>
+</session>
