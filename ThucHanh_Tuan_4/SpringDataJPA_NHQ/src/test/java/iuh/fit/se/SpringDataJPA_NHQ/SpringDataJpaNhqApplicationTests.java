@@ -50,4 +50,13 @@ class SpringDataJpaNhqApplicationTests {
 			System.out.println(nhanVien.toString());
 		}
 	}
+	
+	// Test câu 4:
+	@Test
+	public void findChuyenBayCoDoDaiNhoHon10000VaLonHon8000() {
+		List<ChuyenBay> chuyenBayscau4 = chuyenBayRepository.findChuyenBayCoDoDaiNhoHon10000VaLonHon8000();
+		for (ChuyenBay chuyenBay : chuyenBayscau4) {
+			System.out.println(chuyenBay.toString());
+		}
+	}
 }
