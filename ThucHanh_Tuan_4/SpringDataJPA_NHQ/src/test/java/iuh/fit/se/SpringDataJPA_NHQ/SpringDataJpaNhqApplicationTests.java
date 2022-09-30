@@ -93,4 +93,14 @@ class SpringDataJpaNhqApplicationTests {
 		int totalLuong = nhanVienRepository.getTongLuongTraNhanVien();
 		System.out.println("Tổng lương phải trả cho nhân viên là: " + totalLuong + " $$$");
 	}
+	
+	// Test câu 9:
+	@Test
+	public void getPhiCongLaiBoeing() {
+		List<NhanVien> listPhiCongLaiBoeing = 
+				nhanVienRepository.getPhiCongLaiBoeing();
+		for (NhanVien phiCong : listPhiCongLaiBoeing) {
+			System.out.println(phiCong.toString());
+		}
+	}
 }
