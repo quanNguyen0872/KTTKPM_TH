@@ -77,4 +77,13 @@ class SpringDataJpaNhqApplicationTests {
 			System.out.println(chuyenBay.toString());
 		}
 	}
+	
+	//Test câu 7:
+	@Test
+	public void getMayBayByLoaiBoeing() {
+		List<String> mayBayBoeings = mayBayRepository.getMayBayByLoaiBoeing();
+		for (String loaiBoeing : mayBayBoeings) {
+			System.out.println(loaiBoeing);
+		}
+	}
 }
