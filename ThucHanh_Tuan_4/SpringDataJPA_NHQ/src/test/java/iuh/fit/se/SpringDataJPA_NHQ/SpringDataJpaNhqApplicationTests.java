@@ -78,12 +78,19 @@ class SpringDataJpaNhqApplicationTests {
 		}
 	}
 	
-	//Test câu 7:
+	// Test câu 7:
 	@Test
 	public void getMayBayByLoaiBoeing() {
 		List<String> mayBayBoeings = mayBayRepository.getMayBayByLoaiBoeing();
 		for (String loaiBoeing : mayBayBoeings) {
 			System.out.println(loaiBoeing);
 		}
+	}
+	
+	// Test câu 8:
+	@Test
+	public void getTongLuongTraNhanVien() {
+		int totalLuong = nhanVienRepository.getTongLuongTraNhanVien();
+		System.out.println("Tổng lương phải trả cho nhân viên là: " + totalLuong + " $$$");
 	}
 }
