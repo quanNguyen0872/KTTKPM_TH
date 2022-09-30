@@ -19,4 +19,8 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	@Query(value = "select * from chuyenbay where do_dai > 8000 and do_dai < 10000", nativeQuery = true)
 	public List<ChuyenBay> findChuyenBayCoDoDaiNhoHon10000VaLonHon8000();
 	
+	// Câu 5: Cho biết các chuyến bay xuất phát từ Sài Gòn (SGN) đi Ban Mê Thuộc (BMV).
+	@Query(value = "select * from chuyenbay where ga_di = 'SGN' and ga_den = 'BMV'", nativeQuery = true)
+	public List<ChuyenBay> findChuyenBayTuSGNdiBMV();
+	
 }
