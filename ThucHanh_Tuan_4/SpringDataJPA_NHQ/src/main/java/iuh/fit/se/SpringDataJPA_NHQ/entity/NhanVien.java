@@ -53,4 +53,9 @@ public class NhanVien {
 		this.luong = luong;
 	}
 
+	@Override
+	public String toString() {
+		return "NhanVien [maNV=" + maNV + ", ten=" + ten + ", luong=" + luong + "]";
+	}
+
 }

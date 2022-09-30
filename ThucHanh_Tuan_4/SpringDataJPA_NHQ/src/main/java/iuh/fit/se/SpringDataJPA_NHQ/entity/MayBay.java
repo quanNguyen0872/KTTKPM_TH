@@ -25,9 +25,7 @@ public class MayBay {
 	private Integer tamBay;
 
 	@ManyToMany()
-	@JoinTable(name = "chungnhan", 
-	joinColumns = @JoinColumn(name = "ma_mb", referencedColumnName = "ma_mb"), 
-	inverseJoinColumns = @JoinColumn(name = "ma_nv", referencedColumnName = "ma_nv"))
+	@JoinTable(name = "chungnhan", joinColumns = @JoinColumn(name = "ma_mb", referencedColumnName = "ma_mb"), inverseJoinColumns = @JoinColumn(name = "ma_nv", referencedColumnName = "ma_nv"))
 	private List<NhanVien> nhanViens;
 
 	public Integer getMaMB() {
@@ -72,6 +70,11 @@ public class MayBay {
 		this.loai = loai;
 		this.tamBay = tamBay;
 		this.nhanViens = nhanViens;
+	}
+
+	@Override
+	public String toString() {
+		return "MayBay [maMB=" + maMB + ", loai=" + loai + ", tamBay=" + tamBay + "]";
 	}
 
 }
