@@ -8,8 +8,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import iuh.fit.se.SpringDataJPA_NHQ.entity.ChuyenBay;
 import iuh.fit.se.SpringDataJPA_NHQ.entity.MayBay;
+import iuh.fit.se.SpringDataJPA_NHQ.entity.NhanVien;
 import iuh.fit.se.SpringDataJPA_NHQ.repository.ChuyenBayRepository;
 import iuh.fit.se.SpringDataJPA_NHQ.repository.MayBayRepository;
+import iuh.fit.se.SpringDataJPA_NHQ.repository.NhanVienRepository;
 
 @SpringBootTest
 class SpringDataJpaNhqApplicationTests {
@@ -18,6 +20,9 @@ class SpringDataJpaNhqApplicationTests {
 	
 	@Autowired
 	private MayBayRepository mayBayRepository;
+	
+	@Autowired
+	private NhanVienRepository nhanVienRepository;
 	
 	// Test câu 1:
 	@Test
@@ -36,5 +41,13 @@ class SpringDataJpaNhqApplicationTests {
 			System.out.println(mayBay.toString());
 		}
 	}
-
+	
+	// Test câu 3:
+	@Test
+	public void getNhanVienWithLuongNhoHon10000() {
+		List<NhanVien> nhanViens = nhanVienRepository.getNhanVienWithLuongNhoHon10000();
+		for (NhanVien nhanVien : nhanViens) {
+			System.out.println(nhanVien.toString());
+		}
+	}
 }
