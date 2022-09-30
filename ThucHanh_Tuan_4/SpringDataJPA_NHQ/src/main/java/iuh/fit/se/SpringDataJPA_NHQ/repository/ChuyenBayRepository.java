@@ -23,4 +23,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	@Query(value = "select * from chuyenbay where ga_di = 'SGN' and ga_den = 'BMV'", nativeQuery = true)
 	public List<ChuyenBay> findChuyenBayTuSGNdiBMV();
 	
+	// Câu 6: Có bao nhiêu chuyến xuất phát từ Sài Gòn (SGN)
+	@Query(value = "select * from chuyenbay where ga_di = 'SGN'", nativeQuery = true)
+	public List<ChuyenBay> findChuyenBayGaDiSGN();
 }
